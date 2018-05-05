@@ -25,18 +25,19 @@ GOST_Magma_Blk_8_PrintDebug(uint8_t *state)
 static void
 GOST_Magma_T(const uint8_t *in_data, uint8_t *out_data)
 {
-    uint8_t first_byte, sec_byte;
+    uint8_t first_part_byte, sec_part_byte;
     int i;
     for (i = 0; i < 4; i++)
     {
-        first_byte = (in_data[i] & 0xf0) >> 4;
-        sec_byte = (in_data[i] & 0x0f);
-        first_byte = Pi[i * 2] [first_byte];
-        sec_byte = Pi[i * 2 + 1] [sec_byte];
-        out_data[i] = (first_byte << 4) | sec_byte;
+        first_part_byte = (in_data[i] & 0xf0) >> 4;
+        sec_part_byte = (in_data[i] & 0x0f);
+        first_part_byte = Pi[i * 2] [first_part_byte];
+        sec_part_byte = Pi[i * 2 + 1] [sec_part_byte];
+        out_data[i] = (first_part_byte << 4) | sec_part_byte;
     }
 }
 
+static void
 GOST_Magma_Add(const uint8_t *a, const uint8_t *b, uint8_t *c)
 {
     int i;
@@ -44,6 +45,7 @@ GOST_Magma_Add(const uint8_t *a, const uint8_t *b, uint8_t *c)
         c[i] = a[i]^b[i];
 }
 
+static void
 GOST_Magma_Add_32(const uint8_t *a, const uint8_t *b, uint8_t *c)
 {
     int i;
