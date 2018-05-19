@@ -7,7 +7,6 @@
 #include <malloc.h>
 
 #include "magma_const.h"
-#include "magma_test.h"
 
 typedef uint8_t vect[4]; //блок размером 32 бита
 
