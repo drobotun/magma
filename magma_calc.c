@@ -173,7 +173,7 @@ GOST_Magma_Expand_Key(const uint8_t *key)
 }
 
 void
-GOST_Magma_Encript(const uint8_t *blk, uint8_t *out_blk)
+GOST_Magma_Encrypt(const uint8_t *blk, uint8_t *out_blk)
 {
 #ifdef DEBUG_MODE
     printf("Text:\n");
@@ -187,13 +187,13 @@ GOST_Magma_Encript(const uint8_t *blk, uint8_t *out_blk)
     GOST_Magma_G_Fin(iter_key[31], out_blk, out_blk);
 
 #ifdef DEBUG_MODE
-    printf("Encripted text:\n");
+    printf("Encrypted text:\n");
     GOST_Magma_Blk_8_PrintDebug(out_blk);
 #endif
 }
 
 void
-GOST_Magma_Decript(const uint8_t *blk, uint8_t *out_blk)
+GOST_Magma_Decrypt(const uint8_t *blk, uint8_t *out_blk)
 {
 #ifdef DEBUG_MODE
     printf("Gipher text:\n");
@@ -207,7 +207,7 @@ GOST_Magma_Decript(const uint8_t *blk, uint8_t *out_blk)
     GOST_Magma_G_Fin(iter_key[0], out_blk, out_blk);
 
 #ifdef DEBUG_MODE
-    printf("Decripted text:\n");
+    printf("Decrypted text:\n");
     GOST_Magma_Blk_8_PrintDebug(out_blk);
 #endif
 }
