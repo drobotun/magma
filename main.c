@@ -1,5 +1,6 @@
 #include "magma_calc.h"
 #include "magma_test.h"
+
 int main(int argc, char *argv[])
 {
     uint8_t out_blk[4];
