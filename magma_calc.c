@@ -187,7 +187,7 @@ GOST_Magma_Encript(const uint8_t *blk, uint8_t *out_blk)
     GOST_Magma_G_Fin(iter_key[31], out_blk, out_blk);
 
 #ifdef DEBUG_MODE
-    printf("Encripting text:\n");
+    printf("Encripted text:\n");
     GOST_Magma_Blk_8_PrintDebug(out_blk);
 #endif
 }
@@ -207,7 +207,7 @@ GOST_Magma_Decript(const uint8_t *blk, uint8_t *out_blk)
     GOST_Magma_G_Fin(iter_key[0], out_blk, out_blk);
 
 #ifdef DEBUG_MODE
-    printf("Decripting text:\n");
+    printf("Decripted text:\n");
     GOST_Magma_Blk_8_PrintDebug(out_blk);
 #endif
 }
