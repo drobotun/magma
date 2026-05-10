@@ -62,7 +62,7 @@ Usage
 Key Setup
 ~~~~~~~~~
 
-Before encryption or decryption, you must initialise a ``kuznechik_ctx``
+Before encryption or decryption, you must initialise a ``magma_ctx``
 structure with the 256‑bit key:
 
 .. code-block:: c
@@ -98,7 +98,7 @@ Use ``magma_decrypt()`` to reverse the process:
 Full Example (with test vectors)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The header ``kuznechik_test.h`` provides a known key, plaintext, and the
+The header ``magma_test.h`` provides a known key, plaintext, and the
 expected ciphertext (from the standard). You can use it to verify the
 implementation:
 
