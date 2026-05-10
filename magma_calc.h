@@ -14,7 +14,7 @@
 typedef uint8_t vect[BLOCK_SIZE] __attribute__((aligned(16))); // 64-bit block
 
 typedef struct {
-    vect iter_key[32]; // iteration cipher keys
+    uint8_t iter_key[8][KEY_SIZE]; // iteration cipher keys
 } magma_ctx;
 
 
