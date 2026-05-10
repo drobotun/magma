@@ -8,7 +8,10 @@
 
 #include "magma_const.h"
 
-typedef uint8_t vect[4]; // 32-bit block
+#define BLOCK_SIZE 8
+#define KEY_SIZE 32
+
+typedef uint8_t vect[BLOCK_SIZE] __attribute__((aligned(16))); // 64-bit block
 
 typedef struct {
     vect iter_key[32]; // iteration cipher keys
