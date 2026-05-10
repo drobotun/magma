@@ -7,7 +7,7 @@ GOST R 34.12 - 2015 "Magma"
 .. image:: https://img.shields.io/badge/HACKMAG-blue?color=purple
     :target: https://hackmag.com/stuff/working-with-magma
 .. image:: https://img.shields.io/badge/-%5D%5Bakep-blue?color=blue
-    :target: https://xakep.ru/2017/02/02/working-with-magma/
+    :target: https://xakep.ru/2018/05/10/working-with-magma/
 
 Implementation of the Magma block cipher (GOST R 34.12-2015) in C.
 This repository contains an implementation of the Russian national standard
